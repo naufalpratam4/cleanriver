@@ -37,19 +37,19 @@ const Sidebar = () => {
   return (
     <Box
       as="aside"
-      bgColor="blue.400"
+      bgColor="green.400"
       w="80"
-      color="white"
+      color="#173B26"
       p="8"
       flexShrink="0"
     >
       <Heading as="h3" fontSize="3xl" mb="2">
-        Tirtawater
+        Limpio
       </Heading>
-      <Button
+      {/* <Button
         leftIcon={<FaGithub />}
         bg="white"
-        color="blue.400"
+        color="#358757"
         boxShadow="lg"
         width="full"
         justifyContent="start"
@@ -60,7 +60,7 @@ const Sidebar = () => {
         >
           Source Code
         </a>
-      </Button>
+      </Button> */}
       <Divider my="4" />
       <Text textTransform="uppercase" opacity="75" mb="3" fontWeight="bold">
         Main

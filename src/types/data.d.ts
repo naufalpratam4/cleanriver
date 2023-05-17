@@ -2,7 +2,7 @@ declare module "type" {
   export type River = {
     no: number;
     name: string;
-    temprature: number;
+    temperature: number;
     turbidity: number;
     solid: number;
     distance: number;

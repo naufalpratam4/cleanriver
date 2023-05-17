@@ -2,7 +2,7 @@ const dataset = [
   {
     no: 1,
     name: "Ambar",
-    temprature: 15,
+    temperature: 15,
     turbidity: 4,
     solid: 750,
     distance: 20,
@@ -12,7 +12,7 @@ const dataset = [
   {
     no: 2,
     name: "Anjar",
-    temprature: 10,
+    temperature: 10,
     turbidity: 1,
     solid: 245,
     distance: 900,
@@ -22,7 +22,7 @@ const dataset = [
   {
     no: 3,
     name: "Bado",
-    temprature: 12,
+    temperature: 12,
     turbidity: 2,
     solid: 300,
     distance: 210,
@@ -32,7 +32,7 @@ const dataset = [
   {
     no: 4,
     name: "Bima",
-    temprature: 20,
+    temperature: 20,
     turbidity: 5,
     solid: 550,
     distance: 500,
@@ -42,7 +42,7 @@ const dataset = [
   {
     no: 5,
     name: "Cengker",
-    temprature: 18,
+    temperature: 18,
     turbidity: 1,
     solid: 805,
     distance: 150,
@@ -52,7 +52,7 @@ const dataset = [
   {
     no: 6,
     name: "Danji",
-    temprature: 24,
+    temperature: 24,
     turbidity: 3,
     solid: 700,
     distance: 300,
@@ -62,7 +62,7 @@ const dataset = [
   {
     no: 7,
     name: "Eroh",
-    temprature: 17,
+    temperature: 17,
     turbidity: 4,
     solid: 900,
     distance: 410,
@@ -72,7 +72,7 @@ const dataset = [
   {
     no: 8,
     name: "Fujran",
-    temprature: 10,
+    temperature: 10,
     turbidity: 2,
     solid: 400,
     distance: 200,
@@ -82,7 +82,7 @@ const dataset = [
   {
     no: 9,
     name: "Ijilan",
-    temprature: 25,
+    temperature: 25,
     turbidity: 1,
     solid: 150,
     distance: 220,
@@ -92,7 +92,7 @@ const dataset = [
   {
     no: 10,
     name: "Jambang Wengi",
-    temprature: 13,
+    temperature: 13,
     turbidity: 4,
     solid: 950,
     distance: 230,
@@ -102,7 +102,7 @@ const dataset = [
   {
     no: 11,
     name: "Kadrenan",
-    temprature: 15,
+    temperature: 15,
     turbidity: 5,
     solid: 1000,
     distance: 120,
@@ -112,7 +112,7 @@ const dataset = [
   {
     no: 12,
     name: "Lawang Ombo",
-    temprature: 17,
+    temperature: 17,
     turbidity: 2,
     solid: 315,
     distance: 650,
@@ -122,7 +122,7 @@ const dataset = [
   {
     no: 13,
     name: "Mambulee",
-    temprature: 14,
+    temperature: 14,
     turbidity: 1,
     solid: 140,
     distance: 170,
@@ -132,7 +132,7 @@ const dataset = [
   {
     no: 14,
     name: "Moke",
-    temprature: 23,
+    temperature: 23,
     turbidity: 2,
     solid: 230,
     distance: 120,
@@ -142,7 +142,7 @@ const dataset = [
   {
     no: 15,
     name: "Uranggi",
-    temprature: 25,
+    temperature: 25,
     turbidity: 4,
     solid: 425,
     distance: 470,
@@ -152,7 +152,7 @@ const dataset = [
   {
     no: 16,
     name: "Pranjeng",
-    temprature: 21,
+    temperature: 21,
     turbidity: 1,
     solid: 200,
     distance: 200,
@@ -162,7 +162,7 @@ const dataset = [
   {
     no: 17,
     name: "Rendo",
-    temprature: 11,
+    temperature: 11,
     turbidity: 3,
     solid: 600,
     distance: 550,
@@ -172,7 +172,7 @@ const dataset = [
   {
     no: 18,
     name: "Suliwangi",
-    temprature: 13,
+    temperature: 13,
     turbidity: 2,
     solid: 400,
     distance: 300,
@@ -182,7 +182,7 @@ const dataset = [
   {
     no: 19,
     name: "Tumbang",
-    temprature: 19,
+    temperature: 19,
     turbidity: 5,
     solid: 880,
     distance: 700,
@@ -192,7 +192,7 @@ const dataset = [
   {
     no: 20,
     name: "Uba Sadi",
-    temprature: 20,
+    temperature: 20,
     turbidity: 1,
     solid: 220,
     distance: 238,
@@ -202,7 +202,7 @@ const dataset = [
   {
     no: 21,
     name: "Hari",
-    temprature: 10,
+    temperature: 10,
     turbidity: 2,
     solid: 339,
     distance: 410,
@@ -212,7 +212,7 @@ const dataset = [
   {
     no: 22,
     name: "Sumpur",
-    temprature: 12,
+    temperature: 12,
     turbidity: 3,
     solid: 561,
     distance: 497,
@@ -222,7 +222,7 @@ const dataset = [
   {
     no: 23,
     name: "Bantal",
-    temprature: 19,
+    temperature: 19,
     turbidity: 4,
     solid: 120,
     distance: 222,
@@ -232,7 +232,7 @@ const dataset = [
   {
     no: 24,
     name: "Lelangi",
-    temprature: 15,
+    temperature: 15,
     turbidity: 1,
     solid: 674,
     distance: 659,
@@ -242,7 +242,7 @@ const dataset = [
   {
     no: 25,
     name: "Masang",
-    temprature: 17,
+    temperature: 17,
     turbidity: 5,
     solid: 980,
     distance: 492,
@@ -252,7 +252,7 @@ const dataset = [
   {
     no: 26,
     name: "Mangau",
-    temprature: 13,
+    temperature: 13,
     turbidity: 3,
     solid: 908,
     distance: 149,
@@ -262,7 +262,7 @@ const dataset = [
   {
     no: 27,
     name: "Rami",
-    temprature: 21,
+    temperature: 21,
     turbidity: 5,
     solid: 582,
     distance: 144,
@@ -272,7 +272,7 @@ const dataset = [
   {
     no: 28,
     name: "Manna",
-    temprature: 23,
+    temperature: 23,
     turbidity: 2,
     solid: 437,
     distance: 522,
@@ -282,7 +282,7 @@ const dataset = [
   {
     no: 29,
     name: "Angke",
-    temprature: 14,
+    temperature: 14,
     turbidity: 1,
     solid: 228,
     distance: 306,
@@ -292,7 +292,7 @@ const dataset = [
   {
     no: 30,
     name: "Ciliwung",
-    temprature: 25,
+    temperature: 25,
     turbidity: 4,
     solid: 383,
     distance: 287,
@@ -302,7 +302,7 @@ const dataset = [
   {
     no: 31,
     name: "Citanduy",
-    temprature: 20,
+    temperature: 20,
     turbidity: 3,
     solid: 353,
     distance: 45,
@@ -312,7 +312,7 @@ const dataset = [
   {
     no: 32,
     name: "Cibanten",
-    temprature: 18,
+    temperature: 18,
     turbidity: 4,
     solid: 711,
     distance: 651,
@@ -322,7 +322,7 @@ const dataset = [
   {
     no: 33,
     name: "Dumoga",
-    temprature: 11,
+    temperature: 11,
     turbidity: 2,
     solid: 126,
     distance: 425,
@@ -332,7 +332,7 @@ const dataset = [
   {
     no: 34,
     name: "Ongkak",
-    temprature: 16,
+    temperature: 16,
     turbidity: 5,
     solid: 169,
     distance: 273,
@@ -342,7 +342,7 @@ const dataset = [
   {
     no: 35,
     name: "Tandono",
-    temprature: 24,
+    temperature: 24,
     turbidity: 1,
     solid: 629,
     distance: 294,
@@ -352,7 +352,7 @@ const dataset = [
   {
     no: 36,
     name: "Bailang",
-    temprature: 22,
+    temperature: 22,
     turbidity: 2,
     solid: 352,
     distance: 237,
@@ -362,7 +362,7 @@ const dataset = [
   {
     no: 37,
     name: "Ayong",
-    temprature: 18,
+    temperature: 18,
     turbidity: 5,
     solid: 247,
     distance: 345,
@@ -372,7 +372,7 @@ const dataset = [
   {
     no: 38,
     name: "Sedang",
-    temprature: 25,
+    temperature: 25,
     turbidity: 1,
     solid: 455,
     distance: 272,
@@ -382,7 +382,7 @@ const dataset = [
   {
     no: 39,
     name: "Topadu",
-    temprature: 17,
+    temperature: 17,
     turbidity: 4,
     solid: 125,
     distance: 685,
@@ -392,7 +392,7 @@ const dataset = [
   {
     no: 40,
     name: "Alo",
-    temprature: 11,
+    temperature: 11,
     turbidity: 3,
     solid: 384,
     distance: 39,

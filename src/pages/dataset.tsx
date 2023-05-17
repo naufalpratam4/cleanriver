@@ -19,7 +19,7 @@ const DatasetPage = () => {
         title="Dataset"
         action={
           <Button
-            colorScheme="blue"
+            colorScheme="green"
             leftIcon={<FiFilePlus />}
             onClick={modalController.on}
           >

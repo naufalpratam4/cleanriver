@@ -15,7 +15,7 @@ const AddDataModal = (props: AddDataModalProps) => {
   const { control, handleSubmit, getValues } = useForm<FieldValues>({
     defaultValues: {
       name: "",
-      temprature: "",
+      temperature: "",
       turbidity: "",
       solid: "",
       distance: "",
@@ -28,7 +28,7 @@ const AddDataModal = (props: AddDataModalProps) => {
     const body = getValues();
     pushData({
       name: body.name,
-      temprature: +body.temprature,
+      temperature: +body.temperature,
       turbidity: +body.turbidity,
       solid: +body.solid,
       distance: +body.distance,
@@ -71,8 +71,8 @@ const AddDataModal = (props: AddDataModalProps) => {
           <VStack spacing="4" alignItems="unset">
             <TextField
               control={control}
-              name="temprature"
-              label="temprature"
+              name="temperature"
+              label="temperature"
               type="number"
               rules={{ required: true }}
             />

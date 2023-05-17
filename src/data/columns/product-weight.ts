@@ -46,7 +46,7 @@ const normalizeDataColumns: ReadonlyArray<Column<River & { valueS: number }>> =
     },
     {
       Header: "Temprature",
-      accessor: "temprature",
+      accessor: "temperature",
       width: "17.5%",
     },
     {

@@ -30,7 +30,7 @@ const useWeightProduct = () => {
       0
     );
 
-    // mencari nilai Weight (W)
+    // mencari nilai Weight (Bobot normal) (W)
     const weightData = criteriaWP.map((item) => {
       return {
         ...item,
@@ -57,10 +57,7 @@ const useWeightProduct = () => {
     // Mencari nilai S ternormalisasi
     const newNormalizeData = dataset.map((item) => {
       const criteria: Record<string, number> = {
-        temprature: Math.pow(
-          item.temprature,
-          normalizeDataObj.temprature.value
-        ),
+        temperature: Math.pow(item.temperature, normalizeDataObj.temperature.value),
         turbidity: Math.pow(item.turbidity, normalizeDataObj.turbidity.value),
         solid: Math.pow(item.solid, normalizeDataObj.solid.value),
         distance: Math.pow(item.distance, normalizeDataObj.distance.value),
@@ -96,10 +93,10 @@ const useWeightProduct = () => {
     });
 
     // Melakukan perangkingan
-    var sorted = newRankData.slice().sort(function (a, b) {
+    let sorted = newRankData.slice().sort(function (a, b) {
       return b.valueV - a.valueV;
     });
-    var ranks = newRankData.map(function (v) {
+    let ranks = newRankData.map(function (v) {
       return sorted.indexOf(v) + 1;
     });
     newRankData = ranks.map<RankRiverDataProps>((rank, idx) => {

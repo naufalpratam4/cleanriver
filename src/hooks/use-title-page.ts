@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const useTitlePage = (title: string) => {
   useEffect(() => {
-    document.title = `${title} | Tirtawater`;
+    document.title = `${title} | Limpio`;
   }, []);
 };
 
