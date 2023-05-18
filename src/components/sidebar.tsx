@@ -79,6 +79,13 @@ const Sidebar = () => {
           to="/weight-product"
         />
       </VStack>
+      <VStack spacing="4" alignItems="start">
+        <Link
+          icon={GiWeightCrush}
+          text="SAW Method"
+          to="/saw"
+        />
+      </VStack>
     </Box>
   );
 };

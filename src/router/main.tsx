@@ -1,6 +1,7 @@
 import DatasetPage from "@/pages/dataset";
 import TopsisPage from '@/pages/topsis';
 import WeightProductPage from "@/pages/weight-product";
+import SawPage from "@/pages/saw";
 
 const mainRouter = [
   {
@@ -8,8 +9,8 @@ const mainRouter = [
     element: <WeightProductPage />,
   },
     {
-    path: "topsis",
-    element: <TopsisPage />,
+    path: "saw",
+    element: <SawPage />,
   },
   {
     path: "",

@@ -8,10 +8,21 @@ type WeightDataProps = {
   value: number;
 };
 
+type WeightDataSawProps = {
+  criteria: string;
+  attribute: attribute;
+  value: number;
+};
+
 type RankRiverDataProps = Pick<River, "no" | "name"> & {
   rank: number;
   total: number;
   valueV: number;
+};
+
+type RankRiverDataSawProps = Pick<River, "no" | "name"> & {
+  rank: number;
+  total: number;
 };
 
 const calculateWeightColumns: ReadonlyArray<Column<WeightDataProps>> = [
@@ -23,6 +34,19 @@ const calculateWeightColumns: ReadonlyArray<Column<WeightDataProps>> = [
   {
     Header: "Attribute",
     accessor: "attribute",
+    width: "33%",
+  },
+  {
+    Header: "Weight",
+    accessor: "value",
+    width: "33%",
+  },
+];
+
+const calculateWeightSAWColumns: ReadonlyArray<Column<WeightDataSawProps>> = [
+  {
+    Header: "Criteria",
+    accessor: "criteria",
     width: "33%",
   },
   {
@@ -81,6 +105,55 @@ const normalizeDataColumns: ReadonlyArray<Column<River & { valueS: number }>> =
     },
   ];
 
+  const normalizeDataSawColumns: ReadonlyArray<Column<River & { valueFinal: number }>> =
+  [
+    {
+      Header: "No",
+      accessor: "no",
+      width: "10%",
+    },
+    {
+      Header: "River Name",
+      accessor: "name",
+      width: "20%",
+    },
+    {
+      Header: "Temprature",
+      accessor: "temperature",
+      width: "17.5%",
+    },
+    {
+      Header: "Turbidity",
+      accessor: "turbidity",
+      width: "17.5%",
+    },
+    {
+      Header: "Solid",
+      accessor: "solid",
+      width: "17.5%",
+    },
+    {
+      Header: "Distance",
+      accessor: "distance",
+      width: "17.5%",
+    },
+    {
+      Header: "Terrain",
+      accessor: "terrain",
+      width: "17.5%",
+    },
+    {
+      Header: "Debit",
+      accessor: "debit",
+      width: "17.5%",
+    },
+    {
+      Header: "Total",
+      accessor: "valueFinal",
+      width: "17.5%",
+    },
+  ];
+
 const rankingRiverColumns: ReadonlyArray<Column<RankRiverDataProps>> = [
   {
     Header: "No",
@@ -109,5 +182,28 @@ const rankingRiverColumns: ReadonlyArray<Column<RankRiverDataProps>> = [
   },
 ];
 
-export { calculateWeightColumns, normalizeDataColumns, rankingRiverColumns };
-export type { WeightDataProps, RankRiverDataProps };
+const rankingRiverSawColumns: ReadonlyArray<Column<RankRiverDataSawProps>> = [
+  {
+    Header: "No",
+    accessor: "no",
+    width: "10%",
+  },
+  {
+    Header: "River Name",
+    accessor: "name",
+    width: "30%",
+  },
+  {
+    Header: "Total",
+    accessor: "total",
+    width: "30%",
+  },
+  {
+    Header: "Rank",
+    accessor: "rank",
+    width: "30%",
+  },
+];
+
+export { calculateWeightColumns, calculateWeightSAWColumns, normalizeDataColumns, normalizeDataSawColumns, rankingRiverColumns, rankingRiverSawColumns };
+export type { WeightDataProps, RankRiverDataProps, RankRiverDataSawProps };
