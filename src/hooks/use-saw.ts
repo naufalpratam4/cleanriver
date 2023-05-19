@@ -1,9 +1,7 @@
 import {
     calculateWeightColumns,
     WeightDataProps,
-    normalizeDataColumns,
     RankRiverDataSawProps,
-    rankingRiverColumns,
     normalizeDataSawColumns,
     rankingRiverSawColumns,
 } from "@/data/columns/product-weight";
@@ -43,22 +41,42 @@ const useSaw = () => {
             normalizeDataObj[item.criteria] = { ...item };
         });
 
+        // Bad code, but it just works, and easy to understand
+        const maxValues = {
+            temperature: Math.max(...dataset.map(data => data.temperature)),
+            turbidity: Math.max(...dataset.map(data => data.turbidity)),
+            solid: Math.max(...dataset.map(data => data.solid)),
+            distance: Math.max(...dataset.map(data => data.distance)),
+            terrain: Math.max(...dataset.map(data => data.terrain)),
+            debit: Math.max(...dataset.map(data => data.debit))
+        };
+        const minValues = {
+            temperature: Math.min(...dataset.map(data => data.temperature)),
+            turbidity: Math.min(...dataset.map(data => data.turbidity)),
+            solid: Math.min(...dataset.map(data => data.solid)),
+            distance: Math.min(...dataset.map(data => data.distance)),
+            terrain: Math.min(...dataset.map(data => data.terrain)),
+            debit: Math.min(...dataset.map(data => data.debit))
+        };
+
         const newNormalizeData = dataset.map((item) => {
+            // Bad code, should be use COST-BENEFIT from attribute not hardcode, but it just works
             const criteria: Record<string, number> = {
-                temperature: Number(item.temperature) / Math.min(...Object.values(item).map(Number)),
-                turbidity: Number(item.turbidity) / Math.min(...Object.values(item).map(Number)),
-                solid: Number(item.solid) / Math.min(...Object.values(item).map(Number)),
-                distance: Number(item.distance) / Math.min(...Object.values(item).map(Number)),
-                terrain: Number(item.terrain) / Math.min(...Object.values(item).map(Number)),
-                debit: Number(item.debit) / Math.max(...Object.values(item).map(Number)),
+                temperature: minValues.temperature * normalizeDataObj.temperature.value / item.temperature,
+                turbidity: minValues.turbidity * normalizeDataObj.turbidity.value / item.turbidity,
+                solid: minValues.solid * normalizeDataObj.solid.value / item.solid,
+                distance: minValues.distance * normalizeDataObj.distance.value / item.distance,
+                terrain: minValues.terrain * normalizeDataObj.terrain.value / item.terrain,
+                debit: item.debit / maxValues.debit * normalizeDataObj.debit.value,
             };
+            const valueFinal = Object.values(criteria).reduce(
+                (prev, curr) => prev + curr,
+                0
+            );
             return {
                 ...item,
                 ...criteria,
-                valueFinal: Object.keys(criteria).reduce(
-                    (prev, curr) => prev * criteria[curr],
-                    1
-                ),
+                valueFinal,
             };
         });
 

@@ -20,10 +20,6 @@ const chipMenu = [
     value: "CRITERIA",
   },
   {
-    text: "Calculate Criteria Weight",
-    value: "CALCULATE",
-  },
-  {
     text: "Normalize Criteria Weight",
     value: "NORMALIZE_WEIGHT",
   },
@@ -46,7 +42,7 @@ const SawPage = () => {
   console.log(calculate.normalizeData);
 
   return (
-    <DashboardLayout title="SAW Method">
+    <DashboardLayout title="Simple Additive Weighting Method">
       <HStack spacing="2" mb={3}>
         {chipMenu.map((item) => {
           return (
@@ -69,9 +65,6 @@ const SawPage = () => {
           data={criteriaSAW.map((item) => ({ ...item, value: item.weight }))}
           columns={calculateWeightSAWColumns}
         />
-      ) : null}
-      {activeChip.value === "CALCULATE" ? (
-        <DataTable {...calculate.calculateWeight} />
       ) : null}
       {activeChip.value === "NORMALIZE_WEIGHT" ? (
         <DataTable {...calculate.normalizeWeight} />
