@@ -11,12 +11,12 @@ const Chip = (props: ChipProps) => {
     <Box
       py={2}
       px={4}
-      bg={props.active ? "blue.400" : "gray.100"}
+      bg={props.active ? "green.800" : "gray.100"}
       color={props.active ? "white" : ""}
       rounded="full"
       cursor="pointer"
       _hover={{
-        bg: "blue.400",
+        bg: "green.400",
         color: "white",
       }}
       onClick={props.onClick}

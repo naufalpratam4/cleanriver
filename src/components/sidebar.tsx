@@ -2,7 +2,8 @@ import { Box, Divider, Heading, HStack, Text, VStack } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/react";
 import { BiData } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
-import { GiWeightCrush } from "react-icons/gi";
+// import { GiWeightCrush } from "react-icons/gi";
+import { IconVariablePlus, IconWeight } from "@tabler/icons-react";
 import { IconType } from "react-icons/lib";
 import { useNavigate } from "react-location";
 
@@ -74,14 +75,14 @@ const Sidebar = () => {
       </Text>
       <VStack spacing="4" alignItems="start">
         <Link
-          icon={GiWeightCrush}
+          icon={IconWeight}
           text="Weight Product Method"
           to="/weight-product"
         />
       </VStack>
-      <VStack spacing="4" alignItems="start">
+      <VStack spacing="4" alignItems="start" mt={2}>
         <Link
-          icon={GiWeightCrush}
+          icon={IconVariablePlus}
           text="SAW Method"
           to="/saw"
         />

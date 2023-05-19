@@ -51,7 +51,7 @@ const AddDataModal = (props: AddDataModalProps) => {
         <>
           <Button onClick={close}>Close</Button>
           <Button
-            colorScheme="blue"
+            colorScheme="green"
             leftIcon={<BsPlusLg />}
             onClick={handleSubmit(submit)}
           >
