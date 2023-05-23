@@ -60,7 +60,7 @@ const useSaw = () => {
     };
 
     const newNormalizeData = dataset.map((item) => {
-      // Bad code, should be use COST-BENEFIT from attribute not hardcode, but it just works
+      // Nasty code, should be use COST-BENEFIT from attribute not hardcode, but it just works
       const criteria: Record<string, number> = {
         temperature: minValues.temperature * normalizeDataObj.temperature.value / item.temperature,
         turbidity: minValues.turbidity * normalizeDataObj.turbidity.value / item.turbidity,

@@ -21,6 +21,7 @@
     "react-icons": "^4.3.1",
     "react-location": "^3.3.4",
     "react-table": "^7.7.0",
+    "topsis2": "^1.2.3",
     "vite-tsconfig-paths": "^3.4.1",
     "zustand": "^3.7.1"
   },

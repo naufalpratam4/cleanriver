@@ -13,6 +13,10 @@ const mainRouter = [
     element: <SawPage />,
   },
   {
+    path: "topsis",
+    element: <TopsisPage />,
+  },
+  {
     path: "",
     element: <DatasetPage />,
   },

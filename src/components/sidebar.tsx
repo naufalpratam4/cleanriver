@@ -87,6 +87,13 @@ const Sidebar = () => {
           to="/saw"
         />
       </VStack>
+      <VStack spacing="4" alignItems="start" mt={2}>
+        <Link
+          icon={IconVariablePlus}
+          text="TOPSIS Method"
+          to="/topsis"
+        />
+      </VStack>
     </Box>
   );
 };
