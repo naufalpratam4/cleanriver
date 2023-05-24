@@ -25,6 +25,19 @@ type RankRiverDataSawProps = Pick<River, "no" | "name"> & {
   total: number;
 };
 
+export type RankRiverDataTopsisProps = Pick<River, "no" | "name"> & {
+  rank: number;
+  V: number;
+};
+
+export type idealBestProps = {
+  value: number;
+};
+
+export type idealWorstProps = {
+  value: number;
+};
+
 const calculateWeightColumns: ReadonlyArray<Column<WeightDataProps>> = [
   {
     Header: "Criteria",
@@ -69,7 +82,7 @@ const normalizeDataColumns: ReadonlyArray<Column<River & { valueS: number }>> =
       width: "20%",
     },
     {
-      Header: "Temprature",
+      Header: "Temperature",
       accessor: "temperature",
       width: "17.5%",
     },
@@ -118,7 +131,7 @@ const normalizeDataColumns: ReadonlyArray<Column<River & { valueS: number }>> =
       width: "20%",
     },
     {
-      Header: "Temprature",
+      Header: "Temperature",
       accessor: "temperature",
       width: "17.5%",
     },
@@ -154,7 +167,7 @@ const normalizeDataColumns: ReadonlyArray<Column<River & { valueS: number }>> =
     },
   ];
 
-  export const normalizeDataTopsisColumns: ReadonlyArray<Column<River & { valueFinal: number }>> =
+  export const normalizeDataTopsisColumns: ReadonlyArray<Column> =
   [
     {
       Header: "No",
@@ -167,7 +180,7 @@ const normalizeDataColumns: ReadonlyArray<Column<River & { valueS: number }>> =
       width: "20%",
     },
     {
-      Header: "Temprature",
+      Header: "Temperature",
       accessor: "temperature",
       width: "17.5%",
     },
@@ -197,6 +210,32 @@ const normalizeDataColumns: ReadonlyArray<Column<River & { valueS: number }>> =
       width: "17.5%",
     },
   ];
+
+export const idealBestColumns: ReadonlyArray<Column> = [
+  {
+    Header: "Criteria",
+    accessor: "criteria",
+    width: "80%"
+  },
+  {
+    Header: "Value",
+    accessor: "value",
+    width: "20%"
+  }
+]
+
+export const idealWorstColumns: ReadonlyArray<Column> = [
+  {
+    Header: "Criteria",
+    accessor: "criteria",
+    width: "80%"
+  },
+  {
+    Header: "Value",
+    accessor: "value",
+    width: "20%"
+  }
+]
 
 const rankingRiverColumns: ReadonlyArray<Column<RankRiverDataProps>> = [
   {
@@ -239,6 +278,29 @@ const rankingRiverSawColumns: ReadonlyArray<Column<RankRiverDataSawProps>> = [
   },
   {
     Header: "Total",
+    accessor: "total",
+    width: "30%",
+  },
+  {
+    Header: "Rank",
+    accessor: "rank",
+    width: "30%",
+  },
+];
+
+export const rankingRiverTopsisColumns: ReadonlyArray<Column<RankRiverDataSawProps>> = [
+  {
+    Header: "No",
+    accessor: "no",
+    width: "10%",
+  },
+  {
+    Header: "River Name",
+    accessor: "name",
+    width: "30%",
+  },
+  {
+    Header: "V",
     accessor: "total",
     width: "30%",
   },

@@ -3,7 +3,7 @@ import { Button } from "@chakra-ui/react";
 import { BiData } from "react-icons/bi";
 import { FaGithub } from "react-icons/fa";
 // import { GiWeightCrush } from "react-icons/gi";
-import { IconVariablePlus, IconWeight } from "@tabler/icons-react";
+import { IconVariablePlus, IconWeight, IconTransitionTop } from "@tabler/icons-react";
 import { IconType } from "react-icons/lib";
 import { useNavigate } from "react-location";
 
@@ -38,14 +38,14 @@ const Sidebar = () => {
   return (
     <Box
       as="aside"
-      bgColor="green.400"
+      bgColor="green.600"
       w="80"
-      color="#173B26"
+      color="White"
       p="8"
       flexShrink="0"
     >
       <Heading as="h3" fontSize="3xl" mb="2">
-        Limpio
+        CleanRiver
       </Heading>
       {/* <Button
         leftIcon={<FaGithub />}
@@ -89,7 +89,7 @@ const Sidebar = () => {
       </VStack>
       <VStack spacing="4" alignItems="start" mt={2}>
         <Link
-          icon={IconVariablePlus}
+          icon={IconTransitionTop}
           text="TOPSIS Method"
           to="/topsis"
         />

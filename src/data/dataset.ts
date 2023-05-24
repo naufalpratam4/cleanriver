@@ -1,7 +1,7 @@
 const dataset = [
   {
     no: 1,
-    name: "Ambar",
+    name: "Bogowonto",
     temperature: 15,
     turbidity: 4,
     solid: 750,
@@ -61,7 +61,7 @@ const dataset = [
   },
   {
     no: 7,
-    name: "Eroh",
+    name: "Cisadane",
     temperature: 17,
     turbidity: 4,
     solid: 900,
@@ -121,7 +121,7 @@ const dataset = [
   },
   {
     no: 13,
-    name: "Mambulee",
+    name: "Musi",
     temperature: 14,
     turbidity: 1,
     solid: 140,
@@ -151,7 +151,7 @@ const dataset = [
   },
   {
     no: 16,
-    name: "Pranjeng",
+    name: "Baliem",
     temperature: 21,
     turbidity: 1,
     solid: 200,
@@ -181,7 +181,7 @@ const dataset = [
   },
   {
     no: 19,
-    name: "Tumbang",
+    name: "Kanal Barat Semarang",
     temperature: 19,
     turbidity: 5,
     solid: 880,
@@ -191,7 +191,7 @@ const dataset = [
   },
   {
     no: 20,
-    name: "Uba Sadi",
+    name: "Kanal Timur Semarang",
     temperature: 20,
     turbidity: 1,
     solid: 220,
@@ -251,7 +251,7 @@ const dataset = [
   },
   {
     no: 26,
-    name: "Mangau",
+    name: "Ayung",
     temperature: 13,
     turbidity: 3,
     solid: 908,
@@ -361,7 +361,7 @@ const dataset = [
   },
   {
     no: 37,
-    name: "Ayong",
+    name: "Deli",
     temperature: 18,
     turbidity: 5,
     solid: 247,
@@ -381,7 +381,7 @@ const dataset = [
   },
   {
     no: 39,
-    name: "Topadu",
+    name: "Bengawan Solo",
     temperature: 17,
     turbidity: 4,
     solid: 125,

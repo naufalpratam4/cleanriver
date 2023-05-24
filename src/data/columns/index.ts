@@ -13,7 +13,7 @@ const datasetColumns: ReadonlyArray<Column<River>> = [
     width: "20%",
   },
   {
-    Header: "Temprature",
+    Header: "Temperature",
     accessor: "temperature",
     width: "17.5%",
   },

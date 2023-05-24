@@ -25,6 +25,18 @@ const chipMenu = [
     value: "NORMALIZE_DATA",
   },
   {
+    text: "Normalize & Weight Data",
+    value: "NORMALIZED_WEIGHTED_DATA",
+  },
+  {
+    text: "Ideal Best",
+    value: "IDEAL_BEST",
+  },
+  {
+    text: "Ideal Worst",
+    value: "IDEAL_WORST",
+  },
+  {
     text: "Ranking",
     value: "RANKING",
   },
@@ -63,11 +75,17 @@ const TopsisPage = () => {
           columns={calculateWeightSAWColumns}
         />
       ) : null}
-      {activeChip.value === "NORMALIZE_WEIGHT" ? (
-        <DataTable {...calculate.normalizeWeight} />
-      ) : null}
       {activeChip.value === "NORMALIZE_DATA" ? (
         <DataTable {...calculate.normalizeData} />
+      ) : null}
+      {activeChip.value === "NORMALIZED_WEIGHTED_DATA" ? (
+        <DataTable {...calculate.normalizeWeightData} />
+      ) : null}
+      {activeChip.value === "IDEAL_BEST" ? (
+        <DataTable {...calculate.idealBest} />
+      ) : null}
+      {activeChip.value === "IDEAL_WORST" ? (
+        <DataTable {...calculate.idealWorst} />
       ) : null}
       {activeChip.value === "RANKING" ? (
         <DataTable {...calculate.rankData} />
