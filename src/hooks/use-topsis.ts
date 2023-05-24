@@ -41,7 +41,7 @@ const useTopsis = () => {
       const data = Object.values(dataset[i]);
 
       for (let j = 0; j < m; j++) {
-        const key = Object.keys(dataset[0])[j];
+        const key = Object.keys(dataset[i])[j]; // Use Object.keys(dataset[i]) instead of Object.keys(dataset[0])
         matrix[i][j] = data[j];
       }
     }
@@ -102,6 +102,7 @@ const useTopsis = () => {
         ...criteria,
       };
     });
+    console.log(newNormalizeWeightedData);
 
     const minValues: { [key: string]: number } = {
       temperature: Math.max(...newNormalizeWeightedData.map(data => data.temperature)),
@@ -203,12 +204,13 @@ const useTopsis = () => {
     }));
     setIdealBest(idealBestValues);
     setIdealWorst(idealWorstValues);
-    console.log(returnNormalizedData);
-    console.log(newNormalizeWeightedData);
-    console.log(newRankData);
-    console.log(idealBestValues);
-    console.log(maxValues);
-    console.log(minValues);
+    // console.log(dataset);
+    // console.log(returnNormalizedData);
+    // console.log(newNormalizeWeightedData);
+    // console.log(newRankData);
+    // console.log(idealBestValues);
+    // console.log(maxValues);
+    // console.log(minValues);
     setRankData(newRankData);
   }, []);
 
@@ -230,7 +232,7 @@ const useTopsis = () => {
       data: idealBestData,
     },
     idealWorst: {
-      columns : idealWorstColumns,
+      columns: idealWorstColumns,
       data: idealWorstData,
     },
     rankData: {

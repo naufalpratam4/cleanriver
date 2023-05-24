@@ -73,7 +73,7 @@ const useWeightProduct = () => {
         ),
       };
     });
-
+    console.log(newNormalizeData);
     // Mencarit total nilai S
     const totalValueS = newNormalizeData.reduce(
       (prev, curr) => prev + curr.valueS,

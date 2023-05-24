@@ -18,7 +18,18 @@ const useDataset = create<UseDatasetProps>((set) => {
         }));
 
         const lastNum = newRivers[newRivers.length - 1].no;
-        newRivers.push({ ...river, no: lastNum + 1 });
+        const newRiver = {
+          no: lastNum + 1,
+          name: river.name,
+          temperature: river.temperature,
+          turbidity: river.turbidity,
+          solid: river.solid,
+          distance: river.distance,
+          terrain: river.terrain,
+          debit: river.debit,
+        };
+
+        newRivers.push(newRiver);
 
         return {
           rivers: newRivers,
