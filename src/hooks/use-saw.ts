@@ -27,7 +27,7 @@ const useSaw = () => {
     const totalWeight = criteriaSAW.reduce(
       (prev, curr) => prev + curr.weight,
       0
-    )
+    );
 
     const normalizeWeightData = criteriaSAW.map((item) => {
       return {
@@ -43,31 +43,38 @@ const useSaw = () => {
 
     // Bad code, but it just works, and easy to understand
     const maxValues = {
-      temperature: Math.max(...dataset.map(data => data.temperature)),
-      turbidity: Math.max(...dataset.map(data => data.turbidity)),
-      solid: Math.max(...dataset.map(data => data.solid)),
-      distance: Math.max(...dataset.map(data => data.distance)),
-      terrain: Math.max(...dataset.map(data => data.terrain)),
-      debit: Math.max(...dataset.map(data => data.debit))
+      temperature: Math.max(...dataset.map((data) => data.temperature)),
+      turbidity: Math.max(...dataset.map((data) => data.turbidity)),
+      solid: Math.max(...dataset.map((data) => data.solid)),
+      distance: Math.max(...dataset.map((data) => data.distance)),
+      terrain: Math.max(...dataset.map((data) => data.terrain)),
+      debit: Math.max(...dataset.map((data) => data.debit)),
     };
     const minValues = {
-      temperature: Math.min(...dataset.map(data => data.temperature)),
-      turbidity: Math.min(...dataset.map(data => data.turbidity)),
-      solid: Math.min(...dataset.map(data => data.solid)),
-      distance: Math.min(...dataset.map(data => data.distance)),
-      terrain: Math.min(...dataset.map(data => data.terrain)),
-      debit: Math.min(...dataset.map(data => data.debit))
+      temperature: Math.min(...dataset.map((data) => data.temperature)),
+      turbidity: Math.min(...dataset.map((data) => data.turbidity)),
+      solid: Math.min(...dataset.map((data) => data.solid)),
+      distance: Math.min(...dataset.map((data) => data.distance)),
+      terrain: Math.min(...dataset.map((data) => data.terrain)),
+      debit: Math.min(...dataset.map((data) => data.debit)),
     };
 
     const newNormalizeData = dataset.map((item) => {
       // Nasty code, should be use COST-BENEFIT from attribute not hardcode, but it just works
       const criteria: Record<string, number> = {
-        temperature: minValues.temperature * normalizeDataObj.temperature.value / item.temperature,
-        turbidity: minValues.turbidity * normalizeDataObj.turbidity.value / item.turbidity,
-        solid: minValues.solid * normalizeDataObj.solid.value / item.solid,
-        distance: minValues.distance * normalizeDataObj.distance.value / item.distance,
-        terrain: minValues.terrain * normalizeDataObj.terrain.value / item.terrain,
-        debit: item.debit / maxValues.debit * normalizeDataObj.debit.value,
+        temperature:
+          (minValues.temperature * normalizeDataObj.temperature.value) /
+          item.temperature,
+        turbidity:
+          (minValues.turbidity * normalizeDataObj.turbidity.value) /
+          item.turbidity,
+        solid: (minValues.solid * normalizeDataObj.solid.value) / item.solid,
+        distance:
+          (minValues.distance * normalizeDataObj.distance.value) /
+          item.distance,
+        terrain:
+          (minValues.terrain * normalizeDataObj.terrain.value) / item.terrain,
+        debit: (item.debit / maxValues.debit) * normalizeDataObj.debit.value,
       };
       const valueFinal = Object.values(criteria).reduce(
         (prev, curr) => prev + curr,
@@ -134,6 +141,6 @@ const useSaw = () => {
       data: rankData,
     },
   };
-}
+};
 
 export default useSaw;

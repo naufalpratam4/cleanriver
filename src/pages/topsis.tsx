@@ -48,7 +48,7 @@ const TopsisPage = () => {
   const dataset = useDataset((store) => store.rivers);
   const calculate = useTopsis();
 
-  console.log(calculate)
+  console.log(calculate);
 
   return (
     <DashboardLayout title="TOPSIS Method">
